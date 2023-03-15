@@ -4,7 +4,18 @@ use_bpm 131
 hi = 21
 z = 0.30
 x = 0.5
-w = sleep 1
+w = 0
+
+define :fifth_beat do
+  play :f
+  sleep 1.5
+  play :gb4
+  sleep 0.25
+  play :f
+  sleep 0.25
+  play :eb4
+  sleep 2
+end
 
 notes = [:gb5, :eb5]
 
@@ -30,7 +41,11 @@ end
 live_loop :beat do
   #first beat
   sleep 2
-  play (notes[w])
+  2.times do
+    play (notes[w])
+    sleep 1
+    w = w + 1
+  end
   
   #second beat
   play :bb4, amp: 1.2
@@ -67,14 +82,6 @@ live_loop :beat do
     sleep 1
   end
   
-  
   #fifth beat
-  play :f
-  sleep 1.5
-  play :gb4
-  sleep 0.25
-  play :f
-  sleep 0.25
-  play :eb4
-  sleep 2
+  fifth_beat
 end
