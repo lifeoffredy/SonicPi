@@ -57,3 +57,39 @@ live_loop :left do
   play :e4
   sleep 1/3.0
 end
+
+use_bpm 60
+use_synth :piano
+
+live_loop :right do
+  #measure 2
+  play :g3
+  sleep 0.5
+  play :g3
+  play :b3
+  play :d3
+  play :fs3
+  sleep 1
+  play :b3
+  play :d3
+  play :fs3
+  sleep 0.5
+  play :g3
+  sleep 0.5
+  play :g3
+  sleep 0.125
+  play :b3
+  sleep 0.125
+  play :d3
+  sleep 0.125
+  play :fs3
+  sleep 0.125
+  play :fs3
+  sleep 0.5
+  play :fs3
+  sleep 0.5/3.0
+  play :a3
+  sleep 0.5/3.0
+  play :cs3
+  sleep 0.5/3.0
+end
