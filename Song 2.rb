@@ -2,6 +2,19 @@
 use_bpm 61
 use_synth :piano
 
+define :so do
+  play :fs4
+  sleep 1
+  play :b3
+  sleep 2
+  play :fs4
+  sleep 1/3.0
+  play :g4
+  sleep 1/3.0
+  play :a4
+  sleep 1/3.0
+end
+
 transition = "C:/Users/Fredy Mendoza/Documents/Audacity/10 FREE TRANSITION SOUNDS AND EFFECTS [NO COPYRIGHT].wav"
 
 notes = [:fs4,:fs4,:gs4,:as5]
@@ -36,16 +49,7 @@ live_loop :left do
       i2 = i2 + 1
     end
     #measure 2
-    play :fs4
-    sleep 1
-    play :b3
-    sleep 2
-    play :fs4
-    sleep 1/3.0
-    play :g4
-    sleep 1/3.0
-    play :a4
-    sleep 1/3.0
+    so
     #measure 3
     play :b4
     sleep 0.1
