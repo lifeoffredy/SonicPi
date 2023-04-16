@@ -15,6 +15,19 @@ define :so do
   sleep 1/3.0
 end
 
+define :uo do |a,b,c,d,e|
+  play a
+  sleep 1
+  play b
+  sleep 2
+  play c
+  sleep 1/3.0
+  play d
+  sleep 1/3.0
+  play e
+  sleep 1/3.0
+end
+
 transition = "C:/Users/Fredy Mendoza/Documents/Audacity/10 FREE TRANSITION SOUNDS AND EFFECTS [NO COPYRIGHT].wav"
 
 notes = [:fs4,:fs4,:gs4,:as5]
@@ -51,16 +64,7 @@ live_loop :left do
     #measure 2
     so
     #measure 3
-    play :b4
-    sleep 0.1
-    play :cs4
-    sleep 1.5
-    play :cs4
-    sleep 1/3.0
-    play :d4
-    sleep 1/3.0
-    play :e4
-    sleep 1/3.0
+    uo :b4,:cs4,:cs4,:d4,:e4
     #measure 4
     play :cs5
     sleep 1
