@@ -16,6 +16,19 @@ define :so do
   sleep 1/3.0
 end
 
+define :uo do |f,g,h,i,j|
+  play f
+  sleep 1
+  play g
+  sleep 2
+  play h
+  sleep 1/3.0
+  play i
+  sleep 1/3.0
+  play j
+  sleep 1/3.0
+end
+
 sf = "C:/Users/Fredy Mendoza/Documents/Audacity/Giveon - Unholy Matrimony (Official Lyric Video).wav"
 
 transition = "C:/Users/Fredy Mendoza/Documents/Audacity/Mac Miller - Congratulations ft. Bilal  (R.I.P).wav"
@@ -63,16 +76,7 @@ live_loop :left do
     #measure 2
     so
     #measure 3
-    play :b4
-    sleep 0.1
-    play :cs4
-    sleep 1.5
-    play :cs4
-    sleep 1/3.0
-    play :d4
-    sleep 1/3.0
-    play :e4
-    sleep 1/3.0
+    uo :b4,:cs4,:cs4,:d4,:e4
     #measure 4
     play :cs5
     sleep 1
